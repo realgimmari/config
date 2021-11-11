@@ -1,0 +1,19 @@
+#!/bin/bash
+x=$(echo -e "Cancel\nShutdown\nLogout\nReboot\nLock\nSuspend" |
+rofi -dmenu -i -p "Power Actions")
+if [ $x = "Shutdown" ]
+then
+    exec shutdown now
+elif [ $x = "Logout" ]
+then
+    bspc quit
+elif [ $x = "Reboot" ]
+then
+    exec reboot
+elif [ $x = "Lock" ]
+then
+    exec i3lock
+elif [ $x = "Suspend" ]
+then
+    exec systemctl suspend
+fi

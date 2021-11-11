@@ -1,0 +1,4 @@
+if ! [ "$XDG_CURRENT_DESKTOP" = "KDE" ]; then
+    export QT_QPA_PLATFORMTHEME="qt5ct"
+    export QT_PLUGIN_PATH=~/.kde4/lib/kde4/plugins/:usr/lib/kde4/plugins/
+fi
